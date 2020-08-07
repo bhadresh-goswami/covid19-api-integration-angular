@@ -1,0 +1,118 @@
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Country Name</th>
+                <th>New Confirmed
+                    <!-- 
+    btnSortOrderHandller
+                    <button (click)="sortOrderHandller('NewConfirmed')">Sort</button> -->
+                    <form>
+                        <div class="row">
+
+                            <input type="text" (change)="filterNewConfirmedCount()" [(ngModel)]="lNewConfirmedCount" class="col-3 form-control" /> to
+                            <input type="text" (change)="filterNewConfirmedCount()"  [(ngModel)]="gNewConfirmedCount" class="col-3 form-control" />
+                        </div>
+                    </form>
+                    <div class="btn-group">
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewConfirmed',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewConfirmed',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+
+                </th>
+                <th>Total Confirmed
+                    <div class="btn-group">
+
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalConfirmed',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalConfirmed',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+                </th>
+                <th>New Deaths
+                    <div class="btn-group">
+
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewDeaths',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewDeaths',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+
+                </th>
+                <th>Total Deaths
+                    <div class="btn-group">
+
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalDeaths',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalDeaths',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+
+                </th>
+                <th>New Recovered
+                    <div class="btn-group">
+
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewRecovered',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('NewRecovered',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+
+                </th>
+                <th>Total Recovered
+                    <div class="btn-group">
+
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalRecovered',1)">
+                            <img src="https://image.flaticon.com/icons/png/512/23/23714.png" width="25px" />
+                        </button>
+                        <button class="btn btn-default" (click)="btnSortOrderHandller('TotalRecovered',-1)">
+                            <img src="https://cdn2.iconfinder.com/data/icons/simple-circular-icons-filled/78/Down_Arrow_Filled-512.png"
+                                width="25px" />
+                        </button>
+                    </div>
+
+                </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+
+                <th>Country Name</th>
+                <th>New Confirmed</th>
+                <th>Total Confirmed</th>
+                <th>New Deaths</th>
+                <th>Total Deaths</th>
+                <th>New Recovered</th>
+                <th>Total Recovered</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr *ngFor="let d of data">
+                <td>{{d["Country"]}}</td>
+                <td>{{d["NewConfirmed"]}}</td>
+                <td>{{d["TotalConfirmed"]}}</td>
+                <td>{{d["NewDeaths"]}}</td>
+                <td>{{d["TotalDeaths"]}}</td>
+                <td>{{d["NewRecovered"]}}</td>
+                <td>{{d["TotalRecovered"]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

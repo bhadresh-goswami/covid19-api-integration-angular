@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/dist/css/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/dist/js/scripts.js","src/assets/dist/assets/demo/chart-area-demo.js",
+              "src/assets/dist/assets/demo/chart-bar-demo.js","src/assets/dist/assets/demo/datatables-demo.js"
+            ]
           },
           "configurations": {
             "production": {
